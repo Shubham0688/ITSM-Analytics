@@ -9,6 +9,7 @@ ROOT_DIR = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT_DIR))
 
 from src.sla_calculator import calculate_sla
+from src.ticket_validator import validate_ticket_data
 
 st.set_page_config(
     page_title="ITSM Analytics",
@@ -17,9 +18,34 @@ st.set_page_config(
 )
 
 
-@st.cache_data(ttl=60)
 def load_data():
-    df = pd.read_csv(ROOT_DIR / "data" / "cleaned_tickets.csv")
+    uploaded_file = st.sidebar.file_uploader(
+        "Upload Help-Desk CSV",
+        type=["csv"]
+    )
+
+    if uploaded_file is not None:
+        uploaded_df = pd.read_csv(uploaded_file)
+        df, validation_issues = validate_ticket_data(uploaded_df)
+
+        st.sidebar.success(f"Valid tickets: {len(df)}")
+
+        if not validation_issues.empty:
+            st.warning("Some records contain data quality issues.")
+            st.dataframe(
+                validation_issues,
+                use_container_width=True
+            )
+
+        if df.empty:
+            st.error("No valid tickets available for analysis.")
+            st.stop()
+
+    else:
+        df = pd.read_csv(
+            ROOT_DIR / "data" / "cleaned_tickets.csv"
+        )
+
     df = calculate_sla(df)
     return df
 
@@ -229,10 +255,12 @@ if not filtered_df.empty:
     st.write(f"Tickets breaching SLA: {breached_tickets}")
     st.write(f"Tickets with pending SLA: {sla_pending}")
     st.write(f"Tickets currently open: {open_tickets}")
+
     st.write(
         f"Reopened tickets: "
         f"{(filtered_df['reopened'] == 'Yes').sum()}"
     )
+
     st.write(
         f"Escalated tickets: "
         f"{(filtered_df['escalated'] == 'Yes').sum()}"
@@ -286,7 +314,10 @@ if not agent_report.empty:
 
         st.plotly_chart(fig, use_container_width=True)
 
-    st.dataframe(agent_report, use_container_width=True)
+    st.dataframe(
+        agent_report,
+        use_container_width=True
+    )
 
 else:
     st.info("No resolved tickets available for agent analysis.")
