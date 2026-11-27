@@ -255,9 +255,4 @@ The objective is to transform raw IT help-desk ticket data into meaningful opera
 Developed as a portfolio project demonstrating Python analytics, SQL, data visualization, SLA monitoring, and IT service management concepts.
 
 
-### 15. Project Objective
-
-The objective of ITSM Analytics is to transform raw help-desk ticket data into meaningful operational insights, helping support teams monitor SLA compliance, understand ticket backlogs, evaluate agent performance, and support data-driven IT service management decisions.
-
-### 16. Author
 
