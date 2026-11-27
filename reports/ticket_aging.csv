@@ -1,0 +1,5 @@
+ticket_id,priority,category,department,agent_id,created_at,pending_hours,aging_category
+TKT021,High,Network,IT,AG002,2026-01-24 09:00:00,7359.510797636666,Above 7 Days
+TKT022,Medium,Hardware,IT,AG003,2026-01-25 10:00:00,7334.510797636666,Above 7 Days
+TKT023,Critical,Server,IT,AG004,2026-01-26 08:00:00,7312.510797636666,Above 7 Days
+TKT024,Low,Access,Security,AG001,2026-01-27 11:00:00,7285.510797636666,Above 7 Days

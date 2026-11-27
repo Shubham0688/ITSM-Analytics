@@ -1,0 +1,5 @@
+agent_id,tickets_resolved,avg_resolution_hours,sla_breaches,reopened_tickets
+AG001,6,30.33,3,0
+AG002,6,28.33,5,2
+AG003,5,45.0,5,1
+AG004,4,15.75,3,1

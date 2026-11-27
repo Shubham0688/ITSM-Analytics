@@ -1,0 +1,31 @@
+ITSM BUSINESS INSIGHTS REPORT
+=============================================
+Total Tickets: 25
+Resolved Tickets: 21
+Open Tickets: 4
+Tickets Within SLA: 5
+Tickets Breaching SLA: 20
+Tickets with Pending SLA: 0
+Overall SLA Breach Percentage: 80.00%
+Resolved Ticket SLA Breaches: 16
+Resolved Ticket SLA Breach Percentage: 76.19%
+Reopened Tickets: 4
+Escalated Tickets: 7
+
+TICKETS BY PRIORITY
+------------------------------
+priority
+Critical    7
+High        7
+Medium      6
+Low         5
+
+TICKETS BY CATEGORY
+------------------------------
+category
+Hardware    5
+Network     5
+Software    5
+Access      4
+Server      4
+Security    2

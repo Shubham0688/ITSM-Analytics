@@ -1,0 +1,26 @@
+ticket_id,priority,created_at,resolved_at,resolution_time_hours,manual_resolution_hours,sla_target_hours,manual_expected_status,sla_status,manual_verification
+TKT001,Critical,2026-01-05 09:00:00,2026-01-05 11:00:00,2.0,2.0,4,Within SLA,Within SLA,PASS
+TKT002,High,2026-01-05 10:00:00,2026-01-05 15:00:00,5.0,5.0,8,Within SLA,Within SLA,PASS
+TKT003,Medium,2026-01-06 08:30:00,2026-01-07 10:30:00,26.0,26.0,24,Breached,Breached,PASS
+TKT004,Low,2026-01-06 11:00:00,2026-01-08 12:00:00,49.0,49.0,48,Breached,Breached,PASS
+TKT005,Critical,2026-01-07 09:00:00,2026-01-07 14:30:00,5.5,5.5,4,Breached,Breached,PASS
+TKT006,High,2026-01-08 10:00:00,2026-01-09 12:00:00,26.0,26.0,8,Breached,Breached,PASS
+TKT007,Medium,2026-01-09 09:00:00,2026-01-10 11:00:00,26.0,26.0,24,Breached,Breached,PASS
+TKT008,Low,2026-01-10 10:00:00,2026-01-13 12:00:00,74.0,74.0,48,Breached,Breached,PASS
+TKT009,Critical,2026-01-12 08:00:00,2026-01-12 13:00:00,5.0,5.0,4,Breached,Breached,PASS
+TKT010,High,2026-01-12 11:00:00,2026-01-13 18:00:00,31.0,31.0,8,Breached,Breached,PASS
+TKT011,Medium,2026-01-13 09:00:00,2026-01-14 10:00:00,25.0,25.0,24,Breached,Breached,PASS
+TKT012,Low,2026-01-14 10:00:00,2026-01-16 12:00:00,50.0,50.0,48,Breached,Breached,PASS
+TKT013,Critical,2026-01-15 08:30:00,2026-01-15 10:00:00,1.5,1.5,4,Within SLA,Within SLA,PASS
+TKT014,High,2026-01-16 09:00:00,2026-01-17 15:00:00,30.0,30.0,8,Breached,Breached,PASS
+TKT015,Medium,2026-01-17 10:00:00,2026-01-20 12:00:00,74.0,74.0,24,Breached,Breached,PASS
+TKT016,Critical,2026-01-19 09:00:00,2026-01-19 12:00:00,3.0,3.0,4,Within SLA,Within SLA,PASS
+TKT017,High,2026-01-20 11:00:00,2026-01-22 14:00:00,51.0,51.0,8,Breached,Breached,PASS
+TKT018,Medium,2026-01-21 09:00:00,2026-01-22 10:00:00,25.0,25.0,24,Breached,Breached,PASS
+TKT019,Low,2026-01-22 10:00:00,2026-01-25 12:00:00,74.0,74.0,48,Breached,Breached,PASS
+TKT020,Critical,2026-01-23 08:00:00,2026-01-23 12:00:00,4.0,4.0,4,Within SLA,Within SLA,PASS
+TKT021,High,2026-01-24 09:00:00,,,,8,Breached,Breached,PASS
+TKT022,Medium,2026-01-25 10:00:00,,,,24,Breached,Breached,PASS
+TKT023,Critical,2026-01-26 08:00:00,,,,4,Breached,Breached,PASS
+TKT024,Low,2026-01-27 11:00:00,,,,48,Breached,Breached,PASS
+TKT025,High,2026-01-28 09:00:00,2026-01-30 14:00:00,53.0,53.0,8,Breached,Breached,PASS
