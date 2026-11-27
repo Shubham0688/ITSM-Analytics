@@ -1,8 +1,14 @@
+import sys
+from pathlib import Path
+
 import pandas as pd
 import streamlit as st
 import plotly.express as px
-from src.sla_calculator import calculate_sla
 
+ROOT_DIR = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT_DIR))
+
+from src.sla_calculator import calculate_sla
 
 st.set_page_config(
     page_title="ITSM Analytics",
@@ -13,7 +19,7 @@ st.set_page_config(
 
 @st.cache_data(ttl=60)
 def load_data():
-    df = pd.read_csv("data/cleaned_tickets.csv")
+    df = pd.read_csv(ROOT_DIR / "data" / "cleaned_tickets.csv")
     df = calculate_sla(df)
     return df
 
